@@ -1,5 +1,5 @@
 # learn_ancient_cpp
-cpp practice resposity
+cpp practice repository
 ## Data Structure
 - Array
 - Queue
