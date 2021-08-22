@@ -13,7 +13,6 @@ class linearList{
         virtual int indexOf(const T& Element) const = 0;
         virtual void erase(int Index) = 0;
         virtual void insert(int Index, const T& Element) = 0;
-        virtual void output(std::ostream& out) const = 0;
 };
 
 #endif
