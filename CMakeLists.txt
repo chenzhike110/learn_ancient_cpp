@@ -1,17 +1,25 @@
-cmake_minimum_required(VERSION 3.13)
-project(learn_ancient_cpp)
+cmake_minimum_required(VERSION 3.5)
+project(learn_ancient_cpp CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+# set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_subdirectory(Data_structure)
-add_subdirectory(Algorithm)
+set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/Bin)
 
-target_link_libraries(learn_ancient_cpp 
-  PUBLIC Data_structure)
-  PUBLIC Algorithm
+# add_subdirectory(Data_structure)
+# add_subdirectory(Algorithm)
+# file(GLOB DATA_SRC Data_structure/src/*.cpp)
+include_directories(
+    ${CMAKE_SOURCE_DIR}/Data_structure/include
 )
 
-target_include_directories(learn_ancient_cpp 
-  ${PROJECT_SOURCE_DIR}/Data_structure
-  ${PROJECT_SOURCE_DIR}/Algorithm
+add_executable(learn_ancient_cpp	
+    main.cpp
 )
+
+# target_link_libraries(learn_ancient_cpp PUBLIC Data_structure)  
+
+# target_include_directories(learn_ancient_cpp PUBLIC
+#     ${CMAKE_SOURCE_DIR}/Data_structure/include
+# )

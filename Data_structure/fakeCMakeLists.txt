@@ -1,0 +1,7 @@
+file(GLOB DATA_SRC src/*.cpp)
+file(GLOB DATA_INC include/*.hpp)
+
+add_library(Data_structure ${DATA_SRC})
+target_include_directories(Data_structure PUBLIC include)
+
+install(TARGETS Data_structure DESTINATION lib)
