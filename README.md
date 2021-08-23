@@ -7,7 +7,7 @@ cpp practice repository
 - Array
 - Queue
 - Stack
-- Linked List
+- Linked List (Chain)
 - Tree
 - Graph
 - Heap
